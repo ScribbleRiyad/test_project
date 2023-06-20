@@ -38,6 +38,8 @@ dependencies:
   auto_route: ^7.4.0
   auto_route_generator: ^7.1.1
   get: ^4.6.5
+  responsive_framework: 0.2.0
+  google_fonts: ^4.0.4
 
 dev_dependencies:
   flutter_test:
