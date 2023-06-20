@@ -7,13 +7,20 @@ import 'app/Route/route_importer.dart';
 import 'app/Utils/app_translations.dart';
 
 void main() {
-  runApp(DemoApp());
+  runApp(const DemoApp());
 }
 
-class DemoApp extends StatelessWidget {
-  DemoApp({super.key});
+class DemoApp extends StatefulWidget {
+  const DemoApp({super.key});
 
+  @override
+  State<DemoApp> createState() => _DemoAppState();
+}
+
+class _DemoAppState extends State<DemoApp> {
   final _appRouter = AppRouter();
+
+  bool light = false;
 
   @override
   Widget build(BuildContext context) {

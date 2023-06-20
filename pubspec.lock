@@ -243,6 +243,14 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
+  font_awesome_flutter:
+    dependency: "direct main"
+    description:
+      name: font_awesome_flutter
+      sha256: "959ef4add147753f990b4a7c6cccb746d5792dbdc81b1cde99e62e7edb31b206"
+      url: "https://pub.dev"
+    source: hosted
+    version: "10.4.0"
   frontend_server_client:
     dependency: transitive
     description:
@@ -600,6 +608,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.0.1"
+  toggle_switch:
+    dependency: "direct main"
+    description:
+      name: toggle_switch
+      sha256: "9e6af1f0c5a97d9de41109dc7b9e1b3bbe73417f89b10e0e44dc834fb493d4cb"
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.1.0"
   typed_data:
     dependency: transitive
     description:
