@@ -1,5 +1,4 @@
 import 'package:dio/dio.dart';
-import 'package:test_project/app/Api/urls.dart';
 
 class BaseClient {
   static Future<BaseOptions> getBaseOptions() async {
@@ -10,7 +9,7 @@ class BaseClient {
       // validateStatus: (status) {
       //   return status! < 500;
       // },
-      baseUrl: Urls.baseURL,
+      // baseUrl: Urls.baseURL,
       headers: {
         "Accept": "application/json",
         'Content-type': 'application/json',
