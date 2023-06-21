@@ -1,32 +1,32 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+import 'app_styles.dart';
+
 class Themes {
   static final light = ThemeData.light().copyWith(
-    brightness: Brightness.dark,
-colorScheme:const ColorScheme.light(
-    brightness :Brightness.light,
-    onSecondary : Colors.black,
-  error :  Color(0xffb00020),
-    onError : Colors.white,
-       background : Colors.white,
-     onBackground : Colors.black,
-     surface = Colors.white,   Color onSurface = Colors.black,   Color? surfaceVariant,   Color? onSurfaceVariant,   Color? outline,   Color? outlineVariant,   Color? shadow,   Color? scrim,   Color? inverseSurface,   Color? onInverseSurface,   Color? inversePrimary,   Color? surfaceTint,   Color? primaryVariant = const Color(0xff3700b3),   Color? secondaryVariant = const Color(0xff018786)
-)  ,
+    brightness: Brightness.light,
+    colorScheme: const ColorScheme.light(
+      brightness: Brightness.light,
+      primary: AppStyles.primaryColor,
+      onPrimary: AppStyles.whiteColor,
+      secondary: Color(0xff03dac6),
+      onSecondary: AppStyles.blackColor,
+      error: Color(0xffb00020),
+      onError: AppStyles.whiteColor,
+      background: AppStyles.whiteColor,
+      onBackground: AppStyles.blackColor,
+      surface: AppStyles.whiteColor,
+      onSurface: AppStyles.blackColor,
+    ),
     visualDensity: VisualDensity.adaptivePlatformDensity,
-    backgroundColor: Colors.white,
-    buttonColor: Colors.cyan,
-    bottomAppBarColor: Colors.cyan,
     buttonTheme: const ButtonThemeData(
-      buttonColor: Colors.cyan,
-      textTheme: ButtonTextTheme.primary,
+      buttonColor: Colors.blue,
+      textTheme: ButtonTextTheme.accent,
     ),
   );
   static final dark = ThemeData.dark().copyWith(
-    visualDensity: VisualDensity.adaptivePlatformDensity,
     backgroundColor: Colors.black,
-    buttonColor: Colors.deepPurple,
-    bottomAppBarColor: Colors.deepPurple,
     buttonTheme: const ButtonThemeData(
       buttonColor: Colors.deepPurple,
       textTheme: ButtonTextTheme.primary,

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../Utils/theme_styles.dart';
+import '../Utils/app_styles.dart';
 import 'garibook_text_widgets.dart';
 
 class CustomizeButton extends StatelessWidget {

@@ -1,6 +1,8 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
+import 'package:toggle_switch/toggle_switch.dart';
 import '../../Utils/theme_service.dart';
 
 @RoutePage()
@@ -20,9 +22,27 @@ class _HomePageState extends State<HomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            ToggleSwitch(
+              minWidth: 120.0,
+              initialLabelIndex: 1,
+              cornerRadius: 20.0,
+              activeFgColor: Colors.white,
+              inactiveBgColor: Colors.grey,
+              inactiveFgColor: Colors.white,
+              totalSwitches: 2,
+              labels: const ['Light Mode', 'Dark mode'],
+              icons: const [FontAwesomeIcons.lightbulb, FontAwesomeIcons.moon],
+              activeBgColors: const [
+                [Colors.blue],
+                [Colors.pink]
+              ],
+              onToggle: (index) {
+                print('switched to: $index');
+              },
+            ),
             ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                  primary: context.theme.buttonColor,
+                  backgroundColor: context.theme.primaryColor,
                   padding:
                       const EdgeInsets.symmetric(horizontal: 30, vertical: 16),
                   textStyle: const TextStyle(
