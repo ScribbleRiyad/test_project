@@ -30,7 +30,7 @@ class _HomePageState extends State<HomePage> {
               inactiveBgColor: Colors.grey,
               inactiveFgColor: Colors.white,
               totalSwitches: 2,
-              labels: const ['Light Mode', 'Dark mode'],
+              labels: const ['Light Mode', 'Dark Mode'],
               icons: const [FontAwesomeIcons.lightbulb, FontAwesomeIcons.moon],
               activeBgColors: const [
                 [Colors.blue],
