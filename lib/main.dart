@@ -1,26 +1,22 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:google_fonts/google_fonts.dart';
+import 'package:get_storage/get_storage.dart';
 import 'package:responsive_framework/responsive_wrapper.dart';
 import 'package:responsive_framework/utils/scroll_behavior.dart';
 import 'app/Route/route_importer.dart';
 import 'app/Utils/app_translations.dart';
+import 'app/Utils/constants.dart';
+import 'app/Utils/theme_service.dart';
 
-void main() {
-  runApp(const DemoApp());
+void main() async {
+  await GetStorage.init();
+  runApp(DemoApp());
 }
 
-class DemoApp extends StatefulWidget {
-  const DemoApp({super.key});
+class DemoApp extends StatelessWidget {
+  DemoApp({super.key});
 
-  @override
-  State<DemoApp> createState() => _DemoAppState();
-}
-
-class _DemoAppState extends State<DemoApp> {
   final _appRouter = AppRouter();
-
-  bool light = false;
 
   @override
   Widget build(BuildContext context) {
@@ -41,10 +37,13 @@ class _DemoAppState extends State<DemoApp> {
           const ResponsiveBreakpoint.autoScale(2460, name: "4K"),
         ],
       ),
-      theme: ThemeData(
-        fontFamily: GoogleFonts.poppins().fontFamily,
-        visualDensity: VisualDensity.adaptivePlatformDensity,
-      ),
+      theme: Constants.light,
+      darkTheme: Constants.dark,
+      themeMode: ThemeService().theme,
+      // theme: ThemeData(
+      //   fontFamily: GoogleFonts.poppins().fontFamily,
+      //   visualDensity: VisualDensity.adaptivePlatformDensity,
+      // ),
       translations: AppTranslations(),
       locale: Get.locale,
       fallbackLocale: const Locale('bn', 'BD'),
