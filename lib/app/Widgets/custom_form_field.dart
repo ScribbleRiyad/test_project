@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class GaribookCustomTextFormField extends StatelessWidget {
-  const GaribookCustomTextFormField(
+class CustomTextFormField extends StatelessWidget {
+  const CustomTextFormField(
       {Key? key,
       this.hint,
       this.controller,
@@ -62,8 +62,8 @@ class GaribookCustomTextFormField extends StatelessWidget {
   }
 }
 
-class GaribookCustomDisabledTextFormField extends StatelessWidget {
-  const GaribookCustomDisabledTextFormField(
+class CustomDisabledTextFormField extends StatelessWidget {
+  const CustomDisabledTextFormField(
       {Key? key,
       this.hint,
       this.maxLines,
