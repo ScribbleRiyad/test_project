@@ -62,3 +62,26 @@ class CustomClipperDesign extends CustomClipper<Path> {
     return true;
   }
 }
+
+class CustomClipperDesign extends CustomClipper<Path> {
+  @override
+  Path getClip(Size size) {
+    Path path = Path();
+    double w = size.width;
+    double h = size.height;
+
+    path.lineTo(0, h / 1.2 - 50);
+    path.quadraticBezierTo(20, h / 1.2, 80, h / 1.2);
+    path.lineTo(w, h / 1.2);
+    path.lineTo(w - 80, h / 1.2);
+    path.quadraticBezierTo(w - 20, h - 50, w, h);
+    path.lineTo(w, 0);
+
+    return path;
+  }
+
+  @override
+  bool shouldReclip(covariant CustomClipper<Path> oldClipper) {
+    return true;
+  }
+}
