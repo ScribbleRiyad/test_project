@@ -3,16 +3,16 @@ import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 
 class ThemeService {
-  final _box = GetStorage();
-  final _key = 'isThemeMode';
+  final box = GetStorage();
+  final key = 'isThemeMode';
 
-  ThemeMode get theme => _loadThemeFromBox() ? ThemeMode.dark : ThemeMode.light;
+  ThemeMode get theme => loadThemeFromBox() ? ThemeMode.dark : ThemeMode.light;
 
-  bool _loadThemeFromBox() => _box.read(_key) ?? false;
-  _saveThemeToBox(bool isDarkMode) => _box.write(_key, isDarkMode);
+  bool loadThemeFromBox() => box.read(key) ?? false;
+  saveThemeToBox(bool isDarkMode) => box.write(key, isDarkMode);
 
   void switchTheme() {
-    Get.changeThemeMode(_loadThemeFromBox() ? ThemeMode.light : ThemeMode.dark);
-    _saveThemeToBox(!_loadThemeFromBox());
+    Get.changeThemeMode(loadThemeFromBox() ? ThemeMode.light : ThemeMode.dark);
+    saveThemeToBox(!loadThemeFromBox());
   }
 }

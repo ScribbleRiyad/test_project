@@ -6,6 +6,7 @@ import 'package:responsive_framework/utils/scroll_behavior.dart';
 import 'app/Route/route_importer.dart';
 import 'app/Utils/app_translations.dart';
 import 'app/Utils/constants.dart';
+import 'app/Utils/theme_data.dart';
 import 'app/Utils/theme_service.dart';
 
 void main() async {
@@ -37,13 +38,9 @@ class DemoApp extends StatelessWidget {
           const ResponsiveBreakpoint.autoScale(2460, name: "4K"),
         ],
       ),
-      theme: Constants.light,
-      darkTheme: Constants.dark,
+      theme: Themes.light,
+      darkTheme: Themes.dark,
       themeMode: ThemeService().theme,
-      // theme: ThemeData(
-      //   fontFamily: GoogleFonts.poppins().fontFamily,
-      //   visualDensity: VisualDensity.adaptivePlatformDensity,
-      // ),
       translations: AppTranslations(),
       locale: Get.locale,
       fallbackLocale: const Locale('bn', 'BD'),

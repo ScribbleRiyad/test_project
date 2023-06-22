@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../Utils/theme_styles.dart';
+import '../Utils/app_styles.dart';
 
 class GaribookTextWidget extends StatelessWidget {
   final String text;
