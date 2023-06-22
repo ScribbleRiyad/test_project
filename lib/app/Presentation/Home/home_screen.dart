@@ -14,6 +14,7 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  bool pressed = true;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -22,24 +23,6 @@ class _HomePageState extends State<HomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            ToggleSwitch(
-              minWidth: 120.0,
-              initialLabelIndex: 1,
-              cornerRadius: 20.0,
-              activeFgColor: Colors.white,
-              inactiveBgColor: Colors.grey,
-              inactiveFgColor: Colors.white,
-              totalSwitches: 2,
-              labels: const ['Light Mode', 'Dark Mode'],
-              icons: const [FontAwesomeIcons.lightbulb, FontAwesomeIcons.moon],
-              activeBgColors: const [
-                [Colors.blue],
-                [Colors.pink]
-              ],
-              onToggle: (index) {
-                print('switched to: $index');
-              },
-            ),
             ElevatedButton(
                 style: ElevatedButton.styleFrom(
                   backgroundColor: context.theme.primaryColor,
@@ -54,5 +37,28 @@ class _HomePageState extends State<HomePage> {
         ),
       ),
     );
+  }
+}
+
+class CustomClipperDesign extends CustomClipper<Path> {
+  @override
+  Path getClip(Size size) {
+    Path path = Path();
+    double w = size.width;
+    double h = size.height;
+
+    path.lineTo(0, h / 1.2 - 50);
+    path.quadraticBezierTo(20, h / 1.2, 80, h / 1.2);
+    path.lineTo(w, h / 1.2);
+    path.lineTo(w - 80, h / 1.2);
+    path.quadraticBezierTo(w - 20, h - 50, w, h);
+    path.lineTo(w, 0);
+
+    return path;
+  }
+
+  @override
+  bool shouldReclip(covariant CustomClipper<Path> oldClipper) {
+    return true;
   }
 }
