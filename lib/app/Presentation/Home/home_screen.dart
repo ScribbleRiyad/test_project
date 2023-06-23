@@ -8,6 +8,7 @@ import 'package:test_project/app/Utils/app_styles.dart';
 import '../../Repository/Home/home_repo.dart';
 import '../../Utils/theme_service.dart';
 import '../../Widgets/custom_dot.dart';
+import '../../Widgets/text_widgets.dart';
 import '../../Widgets/textformfield_widgets.dart';
 
 @RoutePage()
@@ -27,7 +28,14 @@ class _HomePageState extends State<HomePage> {
 
      var response = await HomeRepository.getUserName(userName:userName );
       if (response is String){
-        return response;
+
+        return ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+            behavior: SnackBarBehavior.floating, // Add this line
+            content: TextWidget(
+              text: response,
+              color: AppStyles.primaryTextColor,
+              textAlign: TextAlign.start,
+            )));
       }
     else if (response.statusCode == 200) {
        var userData = json.decode(response.toString());

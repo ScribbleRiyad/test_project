@@ -14,7 +14,7 @@ class BaseClient {
         "Accept": "application/json",
         'Content-type': 'application/json',
         'X-Requested-With': 'XMLHttpRequest',
-
+        'Charset': 'utf-8'
       },
     );
 
