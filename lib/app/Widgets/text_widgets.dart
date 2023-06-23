@@ -3,7 +3,7 @@ import 'package:get/get.dart';
 
 import '../Utils/app_styles.dart';
 
-class GaribookTextWidget extends StatelessWidget {
+class TextWidget extends StatelessWidget {
   final String text;
   final Color? color;
   final double? fontSize;
@@ -12,7 +12,7 @@ class GaribookTextWidget extends StatelessWidget {
   final TextAlign? textAlign;
   final TextOverflow? overflow;
   final TextDecoration? textDecoration;
-  const GaribookTextWidget(
+  const TextWidget(
       {Key? key,
       required this.text,
       this.color,

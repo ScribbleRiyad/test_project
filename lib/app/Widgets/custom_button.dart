@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:test_project/app/Widgets/text_widgets.dart';
 
 import '../Utils/app_styles.dart';
-import 'garibook_text_widgets.dart';
+
 
 class CustomizeButton extends StatelessWidget {
   const CustomizeButton({
@@ -44,7 +45,7 @@ class CustomizeButton extends StatelessWidget {
           child: Container(
             padding: const EdgeInsets.all(8),
             child: Center(
-              child: GaribookTextWidget(
+              child: TextWidget(
                 text: buttonText,
                 color: textColor,
                 fontSize: fontSize ?? 16.0,

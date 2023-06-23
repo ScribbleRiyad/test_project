@@ -14,7 +14,7 @@ class BaseClient {
         "Accept": "application/json",
         'Content-type': 'application/json',
         'X-Requested-With': 'XMLHttpRequest',
-        // 'Authorization': 'Bearer ${await LocalData.getToken()}',
+
       },
     );
 
@@ -33,15 +33,5 @@ class BaseClient {
     return response;
   }
 
-  static Future<dynamic> put(url, payload) async {
-    Dio dio = Dio(await getBaseOptions());
-    var response = await dio.put(url, data: payload);
-    return response;
-  }
 
-  static Future<dynamic> delete(url) async {
-    Dio dio = Dio(await getBaseOptions());
-    var response = await dio.delete(url);
-    return response;
-  }
 }

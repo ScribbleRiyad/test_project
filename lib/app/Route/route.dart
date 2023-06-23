@@ -22,6 +22,10 @@ class AppRouter extends $AppRouter {
         CustomRoute(
             page: HomePageRoute.page,
             transitionsBuilder: TransitionsBuilders.slideBottom),
+    CustomRoute(
+        page: UserPageRoute.page,
+        transitionsBuilder: TransitionsBuilders.slideBottom),
+
         // CustomRoute(page: HomeScreenRoute.page,transitionsBuilder: (context, animation, secondaryAnimation, child) => FadeTransition(opacity: animation, child: child,),),
       ];
 }
