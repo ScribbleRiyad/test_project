@@ -4,9 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:test_project/app/Model/Repo/repo_model.dart';
 import 'package:test_project/app/Utils/app_styles.dart';
 import '../../Repository/Home/home_repo.dart';
-
 import '../../Widgets/text_widgets.dart';
-import '../Home/home_screen.dart';
+
 
 @RoutePage()
 class UserPage extends StatefulWidget {
@@ -141,7 +140,7 @@ class _UserPageState extends State<UserPage> {
                   ),
 
                 ),
-              );;
+              );
             },
           ),
         ),
@@ -168,10 +167,7 @@ class _UserPageState extends State<UserPage> {
 //           backgroundColor: Colors.blue,
 //           labelStyle: const TextStyle(color: Colors.white),
 //         ),
-//         leading: const CircleAvatar(
-//           backgroundImage: NetworkImage(
-//             'https://avatars.githubusercontent.com/u/55358498?v=4',
-//           ),
+//
 //         ),
 //       ),
 //     );
